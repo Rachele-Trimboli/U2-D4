@@ -1,0 +1,108 @@
+/*
+1 creazione del testo e formattazione di 1 parola da far ruotare
+2 inserimento delle altre 2 parole
+3 sovrapporre le 3 parole
+4 mostrare 1 parola e nascondere le altre 2
+5 animare 1 parola (fadein - fadeout con spostamento)
+6 animare le altre 2 parole
+7 ritardare progressivamente l'animazione delle altre 2 parole 
+*/
+
+main{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#testoAlternato{
+    border: 2px solid gray;
+    padding: 10px;
+    width: 400px;
+
+}
+#testoAlternato p{
+    font-weight: 700;
+    font-size: 1.2em;
+    color: rgb(99, 99, 99);
+}
+.parole{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: violet;
+    /* transform: translate(-56px, -3px); */
+
+}
+
+
+
+
+
+@keyframes move {
+   0%{
+    transform: translate(82px, -21px);
+
+    }
+    50% {
+        transform: translate(82px, -39px);
+
+    }
+    100% {
+        transform: translate(82px, -59px);
+
+
+    }
+  }
+
+
+    /* i{
+        animation: move 3s infinite 1s alternate;
+} */
+    @keyframes color1 {
+        0%{
+        color: violet;
+        }
+
+        50%{
+            color: transparent;
+        }
+        100%{
+            color: transparent;
+        }
+        
+    }
+
+ #primo{
+    animation: move 10s infinite 0s,color1 10s infinite ;
+}
+@keyframes color2 {
+    0%{
+    color: transparent;
+    }
+    50%{
+        color: violet;
+    }
+    100%{
+        color: transparent;
+    }
+}
+#secondo{
+    animation: move 10s infinite 0s ,color2 10s infinite  ;
+
+}
+@keyframes color3 {
+    0%{
+    color: transparent;
+    }
+    50%{
+        color: transparent;
+    }
+    100%{
+        color: violet;
+    }
+}
+#terzo{
+    animation: move 10s infinite 0s ,color3 10s infinite  ;
+} 

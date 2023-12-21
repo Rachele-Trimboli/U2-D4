@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    font-weight: 700;
+}
+body{
+    font-family: "Poppins";
+}
+h1{
+    font-size: 2em;
+    margin-bottom: 1.4em;
+
+}
+p{
+    font-family: "Indie Flower";
+    font-size: 1.5em ;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    
+}
+#lavagna{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 95%;
+    height: 85%;
+    background-color: #da986b;
+    border: 20px solid #eed3c2;
+    border-radius: 10px;
+}
+.postit{
+    width: 300px;
+    height: 200px;
+    /* width: 340px;
+    height: 240px; */
+    background-color: #f0dc82;
+    color: black;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    transition: all 0.2s linear 0s;
+
+}
+.giallo{
+    transform: rotate(355deg) translate(-21px, 10px)
+}
+.rosa{
+    background-color:#db7093 ;
+    transform: rotate(3deg) translate(-18px, 10px)
+}
+.postit:hover{
+    transform: scale(1.2);
+    z-index: 2;
+    box-shadow: 3px 6px 12px 0px #000000;
+}
+
+
+@media screen and (min-width:1200px){
+    .postit{
+        width: 340px;
+        height: 240px;
+    }
+    
+}
