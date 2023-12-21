@@ -76,3 +76,19 @@ main{
     }
     
 }
+@keyframes dossier {
+        0%{
+            position: absolute;
+        }
+        100%{
+            position: static;
+        }
+    
+}
+.postit{
+    animation: dossier 3s linear 0s ;
+}
+
+
+
+
